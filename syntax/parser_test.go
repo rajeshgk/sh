@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"reflect"
@@ -34,7 +35,12 @@ func TestKeepComments(t *testing.T) {
 func TestParseBash(t *testing.T) {
 	t.Parallel()
 	p := NewParser()
+	n := 0
 	for i, c := range append(fileTests, fileTestsNoPrint...) {
+		for _, in := range c.Strs {
+			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-%03d", n), []byte(in), 0644)
+			n++
+		}
 		want := c.Bash
 		if want == nil {
 			continue
@@ -48,7 +54,12 @@ func TestParseBash(t *testing.T) {
 func TestParsePosix(t *testing.T) {
 	t.Parallel()
 	p := NewParser(Variant(LangPOSIX))
+	n := 0
 	for i, c := range append(fileTests, fileTestsNoPrint...) {
+		for _, in := range c.Strs {
+			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-psx-%03d", n), []byte(in), 0644)
+			n++
+		}
 		want := c.Posix
 		if want == nil {
 			continue
@@ -1774,6 +1785,7 @@ func TestParseErrPosix(t *testing.T) {
 		if want == nil {
 			continue
 		}
+		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-%03d", i), []byte(c.in), 0644)
 		t.Run(fmt.Sprintf("%03d", i), checkError(p, c.in, want.(string)))
 		i++
 	}
@@ -1794,6 +1806,7 @@ func TestParseErrBash(t *testing.T) {
 		if want == nil {
 			continue
 		}
+		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-psx-%03d", i), []byte(c.in), 0644)
 		t.Run(fmt.Sprintf("%03d", i), checkError(p, c.in, want.(string)))
 		i++
 	}
