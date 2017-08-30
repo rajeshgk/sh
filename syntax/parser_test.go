@@ -38,7 +38,8 @@ func TestParseBash(t *testing.T) {
 	n := 0
 	for i, c := range append(fileTests, fileTestsNoPrint...) {
 		for _, in := range c.Strs {
-			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-%03d", n), []byte(in), 0644)
+			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-bash-%03d", n),
+				append([]byte{0}, []byte(in)...), 0644)
 			n++
 		}
 		want := c.Bash
@@ -57,7 +58,8 @@ func TestParsePosix(t *testing.T) {
 	n := 0
 	for i, c := range append(fileTests, fileTestsNoPrint...) {
 		for _, in := range c.Strs {
-			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-psx-%03d", n), []byte(in), 0644)
+			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-psx-%03d", n),
+				append([]byte{1}, []byte(in)...), 0644)
 			n++
 		}
 		want := c.Posix
@@ -74,7 +76,13 @@ func TestParsePosix(t *testing.T) {
 func TestParseMirBSDKorn(t *testing.T) {
 	t.Parallel()
 	p := NewParser(Variant(LangMirBSDKorn))
+	n := 0
 	for i, c := range append(fileTests, fileTestsNoPrint...) {
+		for _, in := range c.Strs {
+			ioutil.WriteFile(fmt.Sprintf("../corpus/parser-mksh-%03d", n),
+				append([]byte{2}, []byte(in)...), 0644)
+			n++
+		}
 		want := c.MirBSDKorn
 		if want == nil {
 			continue
@@ -1785,7 +1793,8 @@ func TestParseErrPosix(t *testing.T) {
 		if want == nil {
 			continue
 		}
-		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-%03d", i), []byte(c.in), 0644)
+		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-bash-%03d", i),
+			append([]byte{0}, []byte(c.in)...), 0644)
 		t.Run(fmt.Sprintf("%03d", i), checkError(p, c.in, want.(string)))
 		i++
 	}
@@ -1806,7 +1815,8 @@ func TestParseErrBash(t *testing.T) {
 		if want == nil {
 			continue
 		}
-		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-psx-%03d", i), []byte(c.in), 0644)
+		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-psx-%03d", i),
+			append([]byte{1}, []byte(c.in)...), 0644)
 		t.Run(fmt.Sprintf("%03d", i), checkError(p, c.in, want.(string)))
 		i++
 	}
@@ -1827,6 +1837,8 @@ func TestParseErrMirBSDKorn(t *testing.T) {
 		if want == nil {
 			continue
 		}
+		ioutil.WriteFile(fmt.Sprintf("../corpus/parser-err-mksh-%03d", i),
+			append([]byte{2}, []byte(c.in)...), 0644)
 		t.Run(fmt.Sprintf("%03d", i), checkError(p, c.in, want.(string)))
 		i++
 	}
