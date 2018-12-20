@@ -2095,7 +2095,7 @@ set +o pipefail
 		"././x-d1/ ././x-d2/\n",
 	},
 	{
-		"mkdir x-d; touch x-f; test -d $PWD/x-*/",
+		"mkdir x-d; touch x-f; echo $PWD; echo x-*/; echo $PWD/x-*; echo $PWD/x-*/",
 		"",
 	},
 

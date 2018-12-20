@@ -6,20 +6,10 @@ env:
 
 matrix:
   include:
-    - os: linux
-      go: 1.11.x
-      env: CHECK_GOFMT=1
     - os: osx
-      go: 1.11.x
-    - os: windows
       go: 1.11.x
 
 install: true
 
 script:
-  - go install ./...
-  - go test ./...
-    # TODO: reenable test -race on windows once TestInteractive stops failing
-  - if [[ $TRAVIS_OS_NAME != "windows" ]]; then go test -short -race ./...; fi
-  - if [[ -n $CHECK_GOFMT ]]; then diff <(echo -n) <(gofmt -d .); fi
-  - shfmt -version
+  - go test ./interp
