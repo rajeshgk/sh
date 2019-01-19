@@ -1,0 +1,5 @@
+<<EOF `
+	foo
+`
+bar
+EOF

@@ -1,0 +1,3 @@
+a <<EOF;b;b;b;b;b;b;b;b;b
+foo
+EOF

@@ -1,0 +1,4 @@
+ <<-EO
+{
+	too little indented}
+EOF

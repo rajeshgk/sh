@@ -1,0 +1,5 @@
+ <<EOF1;<<EOF2
+h1
+EOF1
+h2
+EOF2

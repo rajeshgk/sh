@@ -1,0 +1,1 @@
+case i in 1) oo;; 2 | 3) bar; esac
