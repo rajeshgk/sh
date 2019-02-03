@@ -1,0 +1,3234 @@
+{
+	"types": {
+		"ArithmCmd": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Left": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Right": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Unsigned": {
+						"doc": "",
+						"type": "bool"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ArithmExp": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Bracket": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Left": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Right": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Unsigned": {
+						"doc": "",
+						"type": "bool"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ArithmExpr": {
+			"doc": "",
+			"type": {
+				"kind": "interface",
+				"methods": {
+					"End": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Methods": {}
+		},
+		"ArrayElem": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Comments": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Index": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Value": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ArrayExpr": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Elems": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.ArrayElem",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Last": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Lparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Rparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Assign": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Append": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Array": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.ArrayExpr",
+							"kind": "pointer"
+						}
+					},
+					"Index": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Naked": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Name": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					},
+					"Value": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BinAritOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BinCmdOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BinTestOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BinaryArithm": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.BinAritOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Y": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BinaryCmd": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.BinCmdOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Stmt",
+							"kind": "pointer"
+						}
+					},
+					"Y": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Stmt",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BinaryTest": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.BinTestOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.TestExpr"
+					},
+					"Y": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.TestExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Block": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Lbrace": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Rbrace": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"StmtList": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"BraceExp": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Chars": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Elems": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Word",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Sequence": {
+						"doc": "",
+						"type": "bool"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CStyleLoop": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Cond": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Init": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Lparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Post": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Rparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CallExpr": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Args": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Word",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Assigns": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Assign",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CaseClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Case": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Esac": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Items": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.CaseItem",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Last": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Word": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CaseItem": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Comments": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.CaseOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Patterns": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Word",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"StmtList": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CaseOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CmdSubst": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Left": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"ReplyVar": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Right": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"StmtList": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					},
+					"TempFile": {
+						"doc": "",
+						"type": "bool"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Command": {
+			"doc": "",
+			"type": {
+				"kind": "interface",
+				"methods": {
+					"End": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Methods": {}
+		},
+		"Comment": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Hash": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Text": {
+						"doc": "",
+						"type": "string"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"CoprocClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Coproc": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Name": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					},
+					"Stmt": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Stmt",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"DblQuoted": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Dollar": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Parts": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.WordPart",
+							"kind": "list"
+						}
+					},
+					"Position": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"DeclClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Assigns": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Assign",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Opts": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Word",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Variant": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Expansion": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ParExpOperator"
+					},
+					"Word": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {}
+		},
+		"ExtGlob": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.GlobOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Pattern": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"File": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Name": {
+						"doc": "",
+						"type": "string"
+					},
+					"StmtList": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {}
+		},
+		"ForClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Do": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					},
+					"DoPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"DonePos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"ForPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Loop": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Loop"
+					},
+					"Select": {
+						"doc": "",
+						"type": "bool"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"FuncDecl": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Body": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Stmt",
+							"kind": "pointer"
+						}
+					},
+					"Name": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					},
+					"Position": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"RsrvWord": {
+						"doc": "",
+						"type": "bool"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"GlobOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"IfClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Cond": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					},
+					"Else": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.IfClause",
+							"kind": "pointer"
+						}
+					},
+					"FiPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Last": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Position": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Then": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					},
+					"ThenPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"LangError": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Feature": {
+						"doc": "",
+						"type": "string"
+					},
+					"Filename": {
+						"doc": "",
+						"type": "string"
+					},
+					"Langs": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.LangVariant",
+							"kind": "list"
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"Error": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"LangVariant": {
+			"doc": "",
+			"type": "int",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"LetClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Exprs": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.ArithmExpr",
+							"kind": "list"
+						}
+					},
+					"Let": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Lit": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Value": {
+						"doc": "",
+						"type": "string"
+					},
+					"ValueEnd": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"ValuePos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Loop": {
+			"doc": "",
+			"type": {
+				"kind": "interface",
+				"methods": {
+					"End": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Methods": {}
+		},
+		"Node": {
+			"doc": "",
+			"type": {
+				"kind": "interface",
+				"methods": {
+					"End": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Methods": {}
+		},
+		"ParExpOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ParNamesOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ParamExp": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Dollar": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Excl": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Exp": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Expansion",
+							"kind": "pointer"
+						}
+					},
+					"Index": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Length": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Names": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ParNamesOperator"
+					},
+					"Param": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					},
+					"Rbrace": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Repl": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Replace",
+							"kind": "pointer"
+						}
+					},
+					"Short": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Slice": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Slice",
+							"kind": "pointer"
+						}
+					},
+					"Width": {
+						"doc": "",
+						"type": "bool"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ParenArithm": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Lparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Rparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ParenTest": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Lparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Rparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.TestExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ParseError": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Filename": {
+						"doc": "",
+						"type": "string"
+					},
+					"Pos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Text": {
+						"doc": "",
+						"type": "string"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"Error": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Parser": {
+			"doc": "",
+			"type": {
+				"fields": {},
+				"kind": "struct"
+			},
+			"Methods": {
+				"Document": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "r",
+								"type": "io.Reader"
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": {
+									"elem": "mvdan.cc/sh/syntax.Word",
+									"kind": "pointer"
+								}
+							},
+							{
+								"name": "",
+								"type": "error"
+							}
+						]
+					}
+				},
+				"Incomplete": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						]
+					}
+				},
+				"Interactive": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "r",
+								"type": "io.Reader"
+							},
+							{
+								"name": "fn",
+								"type": {
+									"kind": "function",
+									"params": [
+										{
+											"name": "",
+											"type": {
+												"elem": {
+													"elem": "mvdan.cc/sh/syntax.Stmt",
+													"kind": "pointer"
+												},
+												"kind": "list"
+											}
+										}
+									],
+									"results": [
+										{
+											"name": "",
+											"type": "bool"
+										}
+									]
+								}
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": "error"
+							}
+						]
+					}
+				},
+				"Parse": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "r",
+								"type": "io.Reader"
+							},
+							{
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": {
+									"elem": "mvdan.cc/sh/syntax.File",
+									"kind": "pointer"
+								}
+							},
+							{
+								"name": "",
+								"type": "error"
+							}
+						]
+					}
+				},
+				"Stmts": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "r",
+								"type": "io.Reader"
+							},
+							{
+								"name": "fn",
+								"type": {
+									"kind": "function",
+									"params": [
+										{
+											"name": "",
+											"type": {
+												"elem": "mvdan.cc/sh/syntax.Stmt",
+												"kind": "pointer"
+											}
+										}
+									],
+									"results": [
+										{
+											"name": "",
+											"type": "bool"
+										}
+									]
+								}
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": "error"
+							}
+						]
+					}
+				},
+				"Words": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "r",
+								"type": "io.Reader"
+							},
+							{
+								"name": "fn",
+								"type": {
+									"kind": "function",
+									"params": [
+										{
+											"name": "",
+											"type": {
+												"elem": "mvdan.cc/sh/syntax.Word",
+												"kind": "pointer"
+											}
+										}
+									],
+									"results": [
+										{
+											"name": "",
+											"type": "bool"
+										}
+									]
+								}
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": "error"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Pos": {
+			"doc": "",
+			"type": {
+				"fields": {},
+				"kind": "struct"
+			},
+			"Methods": {
+				"After": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "p2",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						]
+					}
+				},
+				"Col": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "uint"
+							}
+						]
+					}
+				},
+				"IsValid": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "bool"
+							}
+						]
+					}
+				},
+				"Line": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "uint"
+							}
+						]
+					}
+				},
+				"Offset": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "uint"
+							}
+						]
+					}
+				},
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Printer": {
+			"doc": "",
+			"type": {
+				"fields": {},
+				"kind": "struct"
+			},
+			"Methods": {
+				"Print": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [
+							{
+								"name": "w",
+								"type": "io.Writer"
+							},
+							{
+								"name": "node",
+								"type": "mvdan.cc/sh/syntax.Node"
+							}
+						],
+						"results": [
+							{
+								"name": "",
+								"type": "error"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ProcOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"ProcSubst": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ProcOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Rparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"StmtList": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"RedirOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Redirect": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Hdoc": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					},
+					"N": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					},
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.RedirOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Word": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Replace": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"All": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Orig": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					},
+					"With": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {}
+		},
+		"SglQuoted": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Dollar": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Left": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Right": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Value": {
+						"doc": "",
+						"type": "string"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Slice": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Length": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					},
+					"Offset": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {}
+		},
+		"Stmt": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Background": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Cmd": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Command"
+					},
+					"Comments": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Coprocess": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Negated": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Position": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Redirs": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Redirect",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Semicolon": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"StmtList": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Last": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Comment",
+							"kind": "list"
+						}
+					},
+					"Stmts": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Stmt",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Subshell": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Lparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Rparen": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"StmtList": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"TestClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Left": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Right": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.TestExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"TestExpr": {
+			"doc": "",
+			"type": {
+				"kind": "interface",
+				"methods": {
+					"End": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Methods": {}
+		},
+		"TimeClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"PosixFormat": {
+						"doc": "",
+						"type": "bool"
+					},
+					"Stmt": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Stmt",
+							"kind": "pointer"
+						}
+					},
+					"Time": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"UnAritOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"UnTestOperator": {
+			"doc": "",
+			"type": "uint32",
+			"Methods": {
+				"String": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				}
+			}
+		},
+		"UnaryArithm": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.UnAritOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Post": {
+						"doc": "",
+						"type": "bool"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"UnaryTest": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Op": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.UnTestOperator"
+					},
+					"OpPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"X": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.TestExpr"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"WhileClause": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Cond": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					},
+					"Do": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.StmtList"
+					},
+					"DoPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"DonePos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Until": {
+						"doc": "",
+						"type": "bool"
+					},
+					"WhilePos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"Word": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"Parts": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.WordPart",
+							"kind": "list"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Lit": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"WordIter": {
+			"doc": "",
+			"type": {
+				"fields": {
+					"InPos": {
+						"doc": "",
+						"type": "mvdan.cc/sh/syntax.Pos"
+					},
+					"Items": {
+						"doc": "",
+						"type": {
+							"elem": {
+								"elem": "mvdan.cc/sh/syntax.Word",
+								"kind": "pointer"
+							},
+							"kind": "list"
+						}
+					},
+					"Name": {
+						"doc": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Lit",
+							"kind": "pointer"
+						}
+					}
+				},
+				"kind": "struct"
+			},
+			"Methods": {
+				"End": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				},
+				"Pos": {
+					"doc": "",
+					"type": {
+						"kind": "function",
+						"params": [],
+						"results": [
+							{
+								"name": "",
+								"type": "mvdan.cc/sh/syntax.Pos"
+							}
+						]
+					}
+				}
+			}
+		},
+		"WordPart": {
+			"doc": "",
+			"type": {
+				"kind": "interface",
+				"methods": {
+					"End": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					},
+					"Pos": {
+						"doc": "",
+						"type": {
+							"kind": "function",
+							"params": [],
+							"results": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Pos"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Methods": {}
+		}
+	},
+	"funcs": {}
+}
