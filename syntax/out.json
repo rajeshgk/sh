@@ -23,7 +23,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -79,7 +79,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -141,7 +141,7 @@
 					}
 				}
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"ArrayElem": {
 			"doc": "",
@@ -168,7 +168,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -229,7 +229,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -298,7 +298,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -330,7 +330,7 @@
 		"BinAritOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -349,7 +349,7 @@
 		"BinCmdOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -368,7 +368,7 @@
 		"BinTestOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -407,7 +407,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -465,7 +465,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -517,7 +517,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -565,7 +565,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -619,7 +619,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -675,7 +675,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -731,7 +731,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -799,7 +799,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -864,7 +864,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -896,7 +896,7 @@
 		"CaseOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -939,7 +939,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1001,7 +1001,7 @@
 					}
 				}
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"Comment": {
 			"doc": "",
@@ -1018,7 +1018,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1072,7 +1072,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1123,7 +1123,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1186,7 +1186,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1233,7 +1233,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"ExtGlob": {
 			"doc": "",
@@ -1257,7 +1257,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1301,7 +1301,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"ForClause": {
 			"doc": "",
@@ -1334,7 +1334,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1392,7 +1392,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1424,7 +1424,7 @@
 		"GlobOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -1481,7 +1481,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1536,7 +1536,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"Error": {
 					"doc": "",
 					"type": {
@@ -1555,7 +1555,7 @@
 		"LangVariant": {
 			"doc": "",
 			"type": "int",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -1589,7 +1589,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1637,7 +1637,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1699,7 +1699,7 @@
 					}
 				}
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"Node": {
 			"doc": "",
@@ -1734,12 +1734,12 @@
 					}
 				}
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"ParExpOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -1758,7 +1758,7 @@
 		"ParNamesOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -1841,7 +1841,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1889,7 +1889,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1937,7 +1937,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -1985,7 +1985,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"Error": {
 					"doc": "",
 					"type": {
@@ -2007,7 +2007,7 @@
 				"fields": {},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"Document": {
 					"doc": "",
 					"type": {
@@ -2203,7 +2203,7 @@
 				"fields": {},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"After": {
 					"doc": "",
 					"type": {
@@ -2295,7 +2295,7 @@
 				"fields": {},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"Print": {
 					"doc": "",
 					"type": {
@@ -2323,7 +2323,7 @@
 		"ProcOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -2362,7 +2362,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2394,7 +2394,7 @@
 		"RedirOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -2446,7 +2446,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2500,7 +2500,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"SglQuoted": {
 			"doc": "",
@@ -2525,7 +2525,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2569,7 +2569,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"Stmt": {
 			"doc": "",
@@ -2619,7 +2619,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2672,7 +2672,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2720,7 +2720,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2768,7 +2768,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2830,7 +2830,7 @@
 					}
 				}
 			},
-			"Methods": {}
+			"methods": {}
 		},
 		"TimeClause": {
 			"doc": "",
@@ -2854,7 +2854,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2886,7 +2886,7 @@
 		"UnAritOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -2905,7 +2905,7 @@
 		"UnTestOperator": {
 			"doc": "",
 			"type": "uint32",
-			"Methods": {
+			"methods": {
 				"String": {
 					"doc": "",
 					"type": {
@@ -2944,7 +2944,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -2992,7 +2992,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -3052,7 +3052,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -3095,7 +3095,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -3165,7 +3165,7 @@
 				},
 				"kind": "struct"
 			},
-			"Methods": {
+			"methods": {
 				"End": {
 					"doc": "",
 					"type": {
@@ -3227,8 +3227,442 @@
 					}
 				}
 			},
-			"Methods": {}
+			"methods": {}
 		}
 	},
-	"funcs": {}
+	"funcs": {
+		"BinaryNextLine": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "p",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Printer",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": []
+			}
+		},
+		"DebugPrint": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "w",
+						"type": "io.Writer"
+					},
+					{
+						"name": "node",
+						"type": "mvdan.cc/sh/syntax.Node"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": "error"
+					}
+				]
+			}
+		},
+		"HasPattern": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "pattern",
+						"type": "string"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				]
+			}
+		},
+		"Indent": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "spaces",
+						"type": "uint"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": {
+							"kind": "function",
+							"params": [
+								{
+									"name": "",
+									"type": {
+										"elem": "mvdan.cc/sh/syntax.Printer",
+										"kind": "pointer"
+									}
+								}
+							],
+							"results": []
+						}
+					}
+				]
+			}
+		},
+		"KeepComments": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "p",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Parser",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": []
+			}
+		},
+		"KeepPadding": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "p",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Printer",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": []
+			}
+		},
+		"Minify": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "p",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Printer",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": []
+			}
+		},
+		"NewParser": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "options",
+						"type": {
+							"elem": {
+								"kind": "function",
+								"params": [
+									{
+										"name": "",
+										"type": {
+											"elem": "mvdan.cc/sh/syntax.Parser",
+											"kind": "pointer"
+										}
+									}
+								],
+								"results": []
+							},
+							"kind": "list"
+						}
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Parser",
+							"kind": "pointer"
+						}
+					}
+				]
+			}
+		},
+		"NewPrinter": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "options",
+						"type": {
+							"elem": {
+								"kind": "function",
+								"params": [
+									{
+										"name": "",
+										"type": {
+											"elem": "mvdan.cc/sh/syntax.Printer",
+											"kind": "pointer"
+										}
+									}
+								],
+								"results": []
+							},
+							"kind": "list"
+						}
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Printer",
+							"kind": "pointer"
+						}
+					}
+				]
+			}
+		},
+		"QuotePattern": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "pattern",
+						"type": "string"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				]
+			}
+		},
+		"Simplify": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "n",
+						"type": "mvdan.cc/sh/syntax.Node"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				]
+			}
+		},
+		"SpaceRedirects": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "p",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Printer",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": []
+			}
+		},
+		"SplitBraces": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "word",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Word",
+							"kind": "pointer"
+						}
+					}
+				]
+			}
+		},
+		"StopAt": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "word",
+						"type": "string"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": {
+							"kind": "function",
+							"params": [
+								{
+									"name": "",
+									"type": {
+										"elem": "mvdan.cc/sh/syntax.Parser",
+										"kind": "pointer"
+									}
+								}
+							],
+							"results": []
+						}
+					}
+				]
+			}
+		},
+		"SwitchCaseIndent": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "p",
+						"type": {
+							"elem": "mvdan.cc/sh/syntax.Printer",
+							"kind": "pointer"
+						}
+					}
+				],
+				"results": []
+			}
+		},
+		"TranslatePattern": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "pattern",
+						"type": "string"
+					},
+					{
+						"name": "greedy",
+						"type": "bool"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "error"
+					}
+				]
+			}
+		},
+		"ValidName": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "val",
+						"type": "string"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				]
+			}
+		},
+		"Variant": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "l",
+						"type": "mvdan.cc/sh/syntax.LangVariant"
+					}
+				],
+				"results": [
+					{
+						"name": "",
+						"type": {
+							"kind": "function",
+							"params": [
+								{
+									"name": "",
+									"type": {
+										"elem": "mvdan.cc/sh/syntax.Parser",
+										"kind": "pointer"
+									}
+								}
+							],
+							"results": []
+						}
+					}
+				]
+			}
+		},
+		"Walk": {
+			"doc": "",
+			"type": {
+				"kind": "function",
+				"params": [
+					{
+						"name": "node",
+						"type": "mvdan.cc/sh/syntax.Node"
+					},
+					{
+						"name": "f",
+						"type": {
+							"kind": "function",
+							"params": [
+								{
+									"name": "",
+									"type": "mvdan.cc/sh/syntax.Node"
+								}
+							],
+							"results": [
+								{
+									"name": "",
+									"type": "bool"
+								}
+							]
+						}
+					}
+				],
+				"results": []
+			}
+		}
+	}
 }

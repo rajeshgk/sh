@@ -24,7 +24,7 @@ type NamedType struct {
 	Doc  string      `json:"doc"`
 	Type interface{} `json:"type"`
 
-	Methods map[string]DocType
+	Methods map[string]DocType `json:"methods"`
 }
 
 type DocType struct {
@@ -56,6 +56,12 @@ func main() {
 	for _, name := range scope.Names() {
 		obj := scope.Lookup(name)
 		if !obj.Exported() {
+			continue
+		}
+		if fn, ok := obj.(*types.Func); ok {
+			dump.Funcs[fn.Name()] = DocType{
+				Type: dumpType(fn.Type()),
+			}
 			continue
 		}
 		tname, ok := obj.(*types.TypeName)
