@@ -24,6 +24,8 @@ type NamedType struct {
 	Doc  string      `json:"doc"`
 	Type interface{} `json:"type"`
 
+	Implementers []string `json:"implementers"`
+
 	Methods map[string]DocType `json:"methods"`
 }
 
@@ -53,6 +55,19 @@ func main() {
 
 	pkg := pkgs[0]
 	scope := pkg.Types.Scope()
+	var allImpls []*types.Pointer
+
+	for _, name := range scope.Names() {
+		obj := scope.Lookup(name)
+		if _, ok := obj.(*types.TypeName); !ok || !obj.Exported() {
+			continue // just exported types
+		}
+		if _, ok := obj.Type().(*types.Interface); ok {
+			continue // not interfaces
+		}
+		allImpls = append(allImpls, types.NewPointer(obj.Type()))
+	}
+
 	for _, name := range scope.Names() {
 		obj := scope.Lookup(name)
 		if !obj.Exported() {
@@ -74,9 +89,18 @@ func main() {
 			continue
 		}
 
+		under := named.Underlying()
 		dumpNamed := NamedType{
-			Type:    dumpType(named.Underlying()),
-			Methods: map[string]DocType{},
+			Type:         dumpType(under),
+			Methods:      map[string]DocType{},
+			Implementers: []string{},
+		}
+		if iface, ok := under.(*types.Interface); ok {
+			for _, typ := range allImpls {
+				if types.Implements(typ, iface) {
+					dumpNamed.Implementers = append(dumpNamed.Implementers, typ.Elem().String())
+				}
+			}
 		}
 		for i := 0; i < named.NumMethods(); i++ {
 			fn := named.Method(i)
