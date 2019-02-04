@@ -23,7 +23,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -80,7 +79,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -176,7 +174,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -238,7 +235,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -308,7 +304,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -341,7 +336,41 @@
 		"BinAritOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"Add",
+				"AddAssgn",
+				"And",
+				"AndArit",
+				"AndAssgn",
+				"Assgn",
+				"Colon",
+				"Comma",
+				"Eql",
+				"Geq",
+				"Gtr",
+				"Leq",
+				"Lss",
+				"Mul",
+				"MulAssgn",
+				"Neq",
+				"Or",
+				"OrArit",
+				"OrAssgn",
+				"Pow",
+				"Quest",
+				"Quo",
+				"QuoAssgn",
+				"Rem",
+				"RemAssgn",
+				"Shl",
+				"ShlAssgn",
+				"Shr",
+				"ShrAssgn",
+				"Sub",
+				"SubAssgn",
+				"Xor",
+				"XorAssgn"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -361,7 +390,12 @@
 		"BinCmdOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"AndStmt",
+				"OrStmt",
+				"Pipe",
+				"PipeAll"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -381,7 +415,24 @@
 		"BinTestOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"AndTest",
+				"OrTest",
+				"TsAfter",
+				"TsBefore",
+				"TsDevIno",
+				"TsEql",
+				"TsGeq",
+				"TsGtr",
+				"TsLeq",
+				"TsLss",
+				"TsMatch",
+				"TsNeq",
+				"TsNewer",
+				"TsNoMatch",
+				"TsOlder",
+				"TsReMatch"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -421,7 +472,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -480,7 +530,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -533,7 +582,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -582,7 +630,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -637,7 +684,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -694,7 +740,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -751,7 +796,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -820,7 +864,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -886,7 +929,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -919,7 +961,12 @@
 		"CaseOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"Break",
+				"Fallthrough",
+				"Resume",
+				"ResumeKorn"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -963,7 +1010,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1060,7 +1106,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1115,7 +1160,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1167,7 +1211,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1231,7 +1274,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1279,7 +1321,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {}
 		},
 		"ExtGlob": {
@@ -1304,7 +1345,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1349,7 +1389,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {}
 		},
 		"ForClause": {
@@ -1383,7 +1422,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1442,7 +1480,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1475,7 +1512,13 @@
 		"GlobOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"GlobAt",
+				"GlobExcl",
+				"GlobPlus",
+				"GlobQuest",
+				"GlobStar"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -1533,7 +1576,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1589,7 +1631,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"Error": {
 					"doc": "",
@@ -1609,7 +1650,11 @@
 		"LangVariant": {
 			"doc": "",
 			"type": "int",
-			"implementers": [],
+			"enumvalues": [
+				"LangBash",
+				"LangMirBSDKorn",
+				"LangPOSIX"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -1644,7 +1689,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1693,7 +1737,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1844,7 +1887,25 @@
 		"ParExpOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"LowerAll",
+				"LowerFirst",
+				"OtherParamOps",
+				"RemLargePrefix",
+				"RemLargeSuffix",
+				"RemSmallPrefix",
+				"RemSmallSuffix",
+				"SubstAssgn",
+				"SubstColAssgn",
+				"SubstColMinus",
+				"SubstColPlus",
+				"SubstColQuest",
+				"SubstMinus",
+				"SubstPlus",
+				"SubstQuest",
+				"UpperAll",
+				"UpperFirst"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -1864,7 +1925,10 @@
 		"ParNamesOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"NamesPrefix",
+				"NamesPrefixWords"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -1948,7 +2012,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -1997,7 +2060,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2046,7 +2108,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2095,7 +2156,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"Error": {
 					"doc": "",
@@ -2118,7 +2178,6 @@
 				"fields": {},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"Document": {
 					"doc": "",
@@ -2315,7 +2374,6 @@
 				"fields": {},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"After": {
 					"doc": "",
@@ -2408,7 +2466,6 @@
 				"fields": {},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"Print": {
 					"doc": "",
@@ -2437,7 +2494,10 @@
 		"ProcOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"CmdIn",
+				"CmdOut"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -2477,7 +2537,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2510,7 +2569,20 @@
 		"RedirOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"AppAll",
+				"AppOut",
+				"ClbOut",
+				"DashHdoc",
+				"DplIn",
+				"DplOut",
+				"Hdoc",
+				"RdrAll",
+				"RdrIn",
+				"RdrInOut",
+				"RdrOut",
+				"WordHdoc"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -2563,7 +2635,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2618,7 +2689,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {}
 		},
 		"SglQuoted": {
@@ -2644,7 +2714,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2689,7 +2758,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {}
 		},
 		"Stmt": {
@@ -2740,7 +2808,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2794,7 +2861,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2843,7 +2909,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2892,7 +2957,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -2985,7 +3049,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -3018,7 +3081,13 @@
 		"UnAritOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"Dec",
+				"Inc",
+				"Minus",
+				"Not",
+				"Plus"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -3038,7 +3107,33 @@
 		"UnTestOperator": {
 			"doc": "",
 			"type": "uint32",
-			"implementers": [],
+			"enumvalues": [
+				"TsBlckSp",
+				"TsCharSp",
+				"TsDirect",
+				"TsEmpStr",
+				"TsExec",
+				"TsExists",
+				"TsFdTerm",
+				"TsGIDSet",
+				"TsGrpOwn",
+				"TsModif",
+				"TsNempStr",
+				"TsNmPipe",
+				"TsNoEmpty",
+				"TsNot",
+				"TsOptSet",
+				"TsRead",
+				"TsRefVar",
+				"TsRegFile",
+				"TsSmbLink",
+				"TsSocket",
+				"TsSticky",
+				"TsUIDSet",
+				"TsUsrOwn",
+				"TsVarSet",
+				"TsWrite"
+			],
 			"methods": {
 				"String": {
 					"doc": "",
@@ -3078,7 +3173,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -3127,7 +3221,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -3188,7 +3281,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -3232,7 +3324,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",
@@ -3303,7 +3394,6 @@
 				},
 				"kind": "struct"
 			},
-			"implementers": [],
 			"methods": {
 				"End": {
 					"doc": "",

@@ -24,7 +24,8 @@ type NamedType struct {
 	Doc  string      `json:"doc"`
 	Type interface{} `json:"type"`
 
-	Implementers []string `json:"implementers"`
+	EnumValues   []string `json:"enumvalues,omitempty"`
+	Implementers []string `json:"implementers,omitempty"`
 
 	Methods map[string]DocType `json:"methods"`
 }
@@ -56,16 +57,23 @@ func main() {
 	pkg := pkgs[0]
 	scope := pkg.Types.Scope()
 	var allImpls []*types.Pointer
+	var allConsts []*types.Const
 
 	for _, name := range scope.Names() {
 		obj := scope.Lookup(name)
-		if _, ok := obj.(*types.TypeName); !ok || !obj.Exported() {
-			continue // just exported types
+		if !obj.Exported() {
+			continue
 		}
-		if _, ok := obj.Type().(*types.Interface); ok {
-			continue // not interfaces
+		switch obj := obj.(type) {
+		case *types.TypeName:
+			// not interfaces
+			if _, ok := obj.Type().(*types.Interface); !ok {
+				// include pointer receivers too
+				allImpls = append(allImpls, types.NewPointer(obj.Type()))
+			}
+		case *types.Const:
+			allConsts = append(allConsts, obj)
 		}
-		allImpls = append(allImpls, types.NewPointer(obj.Type()))
 	}
 
 	for _, name := range scope.Names() {
@@ -91,13 +99,22 @@ func main() {
 
 		under := named.Underlying()
 		dumpNamed := NamedType{
-			Type:         dumpType(under),
-			Methods:      map[string]DocType{},
-			Implementers: []string{},
+			Type:    dumpType(under),
+			Methods: map[string]DocType{},
 		}
-		if iface, ok := under.(*types.Interface); ok {
+		switch under := under.(type) {
+		case *types.Basic:
+			if under.Info() & types.IsInteger == 0 {
+				break
+			}
+			for _, cnst := range allConsts {
+				if cnst.Type() == named {
+					dumpNamed.EnumValues = append(dumpNamed.EnumValues, cnst.Name())
+				}
+			}
+		case *types.Interface:
 			for _, typ := range allImpls {
-				if types.Implements(typ, iface) {
+				if types.Implements(typ, under) {
 					dumpNamed.Implementers = append(dumpNamed.Implementers, typ.Elem().String())
 				}
 			}
