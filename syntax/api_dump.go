@@ -104,7 +104,7 @@ func main() {
 		}
 		switch under := under.(type) {
 		case *types.Basic:
-			if under.Info() & types.IsInteger == 0 {
+			if under.Info()&types.IsInteger == 0 {
 				break
 			}
 			for _, cnst := range allConsts {
@@ -156,14 +156,20 @@ func dumpType(typ types.Type) interface{} {
 		return dump
 	case *types.Struct:
 		dump["kind"] = "struct"
-		fields := map[string]DocType{}
+		type Field struct {
+			Doc      string      `json:"doc"`
+			Type     interface{} `json:"type"`
+			Embedded bool        `json:"embedded"`
+		}
+		fields := map[string]Field{}
 		for i := 0; i < typ.NumFields(); i++ {
 			fd := typ.Field(i)
 			if !fd.Exported() {
 				continue
 			}
-			fields[fd.Name()] = DocType{
-				Type: dumpType(fd.Type()),
+			fields[fd.Name()] = Field{
+				Type:     dumpType(fd.Type()),
+				Embedded: fd.Embedded(),
 			}
 		}
 		dump["fields"] = fields

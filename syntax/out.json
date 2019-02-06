@@ -6,19 +6,23 @@
 				"fields": {
 					"Left": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Right": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Unsigned": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -58,23 +62,28 @@
 				"fields": {
 					"Bracket": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Left": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Right": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Unsigned": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -158,18 +167,21 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Index": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Value": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -215,22 +227,26 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Last": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Lparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Rparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -270,36 +286,42 @@
 				"fields": {
 					"Append": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Array": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.ArrayExpr",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Index": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Naked": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Name": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Value": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -455,19 +477,23 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.BinAritOperator"
+						"type": "mvdan.cc/sh/syntax.BinAritOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Y": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -507,25 +533,29 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.BinCmdOperator"
+						"type": "mvdan.cc/sh/syntax.BinCmdOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Stmt",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Y": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Stmt",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -565,19 +595,23 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.BinTestOperator"
+						"type": "mvdan.cc/sh/syntax.BinTestOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.TestExpr"
+						"type": "mvdan.cc/sh/syntax.TestExpr",
+						"embedded": false
 					},
 					"Y": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.TestExpr"
+						"type": "mvdan.cc/sh/syntax.TestExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -617,15 +651,18 @@
 				"fields": {
 					"Lbrace": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Rbrace": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"StmtList": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": true
 					}
 				},
 				"kind": "struct"
@@ -665,7 +702,8 @@
 				"fields": {
 					"Chars": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Elems": {
 						"doc": "",
@@ -675,11 +713,13 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Sequence": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -719,23 +759,28 @@
 				"fields": {
 					"Cond": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Init": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Lparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Post": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Rparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -781,7 +826,8 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Assigns": {
 						"doc": "",
@@ -791,7 +837,8 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -831,11 +878,13 @@
 				"fields": {
 					"Case": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Esac": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Items": {
 						"doc": "",
@@ -845,21 +894,24 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Last": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Word": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -902,15 +954,18 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.CaseOperator"
+						"type": "mvdan.cc/sh/syntax.CaseOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Patterns": {
 						"doc": "",
@@ -920,11 +975,13 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"StmtList": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": true
 					}
 				},
 				"kind": "struct"
@@ -989,23 +1046,28 @@
 				"fields": {
 					"Left": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"ReplyVar": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Right": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"StmtList": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": true
 					},
 					"TempFile": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1097,11 +1159,13 @@
 				"fields": {
 					"Hash": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Text": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1141,21 +1205,24 @@
 				"fields": {
 					"Coproc": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Name": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Stmt": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Stmt",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1195,18 +1262,21 @@
 				"fields": {
 					"Dollar": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Parts": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.WordPart",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Position": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1252,7 +1322,8 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Opts": {
 						"doc": "",
@@ -1262,14 +1333,16 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Variant": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1309,14 +1382,16 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ParExpOperator"
+						"type": "mvdan.cc/sh/syntax.ParExpOperator",
+						"embedded": false
 					},
 					"Word": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1329,18 +1404,21 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.GlobOperator"
+						"type": "mvdan.cc/sh/syntax.GlobOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Pattern": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1380,11 +1458,13 @@
 				"fields": {
 					"Name": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					},
 					"StmtList": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": true
 					}
 				},
 				"kind": "struct"
@@ -1397,27 +1477,33 @@
 				"fields": {
 					"Do": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": false
 					},
 					"DoPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"DonePos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"ForPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Loop": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Loop"
+						"type": "mvdan.cc/sh/syntax.Loop",
+						"embedded": false
 					},
 					"Select": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1460,22 +1546,26 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Stmt",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Name": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Position": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"RsrvWord": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1541,37 +1631,44 @@
 				"fields": {
 					"Cond": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": false
 					},
 					"Else": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.IfClause",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"FiPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Last": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Position": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Then": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": false
 					},
 					"ThenPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1611,22 +1708,26 @@
 				"fields": {
 					"Feature": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					},
 					"Filename": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					},
 					"Langs": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.LangVariant",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Pos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": true
 					}
 				},
 				"kind": "struct"
@@ -1680,11 +1781,13 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.ArithmExpr",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Let": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1724,15 +1827,18 @@
 				"fields": {
 					"Value": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					},
 					"ValueEnd": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"ValuePos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -1951,63 +2057,75 @@
 				"fields": {
 					"Dollar": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Excl": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Exp": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Expansion",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Index": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Length": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Names": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ParNamesOperator"
+						"type": "mvdan.cc/sh/syntax.ParNamesOperator",
+						"embedded": false
 					},
 					"Param": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Rbrace": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Repl": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Replace",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Short": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Slice": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Slice",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Width": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2047,15 +2165,18 @@
 				"fields": {
 					"Lparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Rparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2095,15 +2216,18 @@
 				"fields": {
 					"Lparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Rparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.TestExpr"
+						"type": "mvdan.cc/sh/syntax.TestExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2143,15 +2267,18 @@
 				"fields": {
 					"Filename": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					},
 					"Pos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": true
 					},
 					"Text": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2520,19 +2647,23 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ProcOperator"
+						"type": "mvdan.cc/sh/syntax.ProcOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Rparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"StmtList": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": true
 					}
 				},
 				"kind": "struct"
@@ -2608,29 +2739,34 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"N": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.RedirOperator"
+						"type": "mvdan.cc/sh/syntax.RedirOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Word": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2670,21 +2806,24 @@
 				"fields": {
 					"All": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Orig": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"With": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Word",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2697,19 +2836,23 @@
 				"fields": {
 					"Dollar": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Left": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Right": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Value": {
 						"doc": "",
-						"type": "string"
+						"type": "string",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2749,11 +2892,13 @@
 				"fields": {
 					"Length": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					},
 					"Offset": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2766,30 +2911,36 @@
 				"fields": {
 					"Background": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Cmd": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Command"
+						"type": "mvdan.cc/sh/syntax.Command",
+						"embedded": false
 					},
 					"Comments": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Coprocess": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Negated": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Position": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Redirs": {
 						"doc": "",
@@ -2799,11 +2950,13 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Semicolon": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2846,7 +2999,8 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Comment",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Stmts": {
 						"doc": "",
@@ -2856,7 +3010,8 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -2896,15 +3051,18 @@
 				"fields": {
 					"Lparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Rparen": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"StmtList": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": true
 					}
 				},
 				"kind": "struct"
@@ -2944,15 +3102,18 @@
 				"fields": {
 					"Left": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Right": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.TestExpr"
+						"type": "mvdan.cc/sh/syntax.TestExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -3033,18 +3194,21 @@
 				"fields": {
 					"PosixFormat": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"Stmt": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Stmt",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					},
 					"Time": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -3156,19 +3320,23 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.UnAritOperator"
+						"type": "mvdan.cc/sh/syntax.UnAritOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Post": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.ArithmExpr"
+						"type": "mvdan.cc/sh/syntax.ArithmExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -3208,15 +3376,18 @@
 				"fields": {
 					"Op": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.UnTestOperator"
+						"type": "mvdan.cc/sh/syntax.UnTestOperator",
+						"embedded": false
 					},
 					"OpPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"X": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.TestExpr"
+						"type": "mvdan.cc/sh/syntax.TestExpr",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -3256,27 +3427,33 @@
 				"fields": {
 					"Cond": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": false
 					},
 					"Do": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.StmtList"
+						"type": "mvdan.cc/sh/syntax.StmtList",
+						"embedded": false
 					},
 					"DoPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"DonePos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Until": {
 						"doc": "",
-						"type": "bool"
+						"type": "bool",
+						"embedded": false
 					},
 					"WhilePos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -3319,7 +3496,8 @@
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.WordPart",
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
@@ -3372,7 +3550,8 @@
 				"fields": {
 					"InPos": {
 						"doc": "",
-						"type": "mvdan.cc/sh/syntax.Pos"
+						"type": "mvdan.cc/sh/syntax.Pos",
+						"embedded": false
 					},
 					"Items": {
 						"doc": "",
@@ -3382,14 +3561,16 @@
 								"kind": "pointer"
 							},
 							"kind": "list"
-						}
+						},
+						"embedded": false
 					},
 					"Name": {
 						"doc": "",
 						"type": {
 							"elem": "mvdan.cc/sh/syntax.Lit",
 							"kind": "pointer"
-						}
+						},
+						"embedded": false
 					}
 				},
 				"kind": "struct"
